@@ -54,18 +54,10 @@ export default function Calculator() {
         <OperatorButton operator="-" handleClick={handleClick} />
         <NumberSection min={7} max={9} handleClick={handleClick} />
         <OperatorButton operator="*" handleClick={handleClick} />
-        <button name="0" onClick={handleClick} className="col-span-2 p-2 bg-gray-300 rounded">
-          0
-        </button>
+        <NumberButton number={0} handleClick={handleClick} />
         <NumberButton number="." handleClick={handleClick} />
         <OperatorButton operator="/" handleClick={handleClick} />
-        <button
-          name="="
-          onClick={calculate}
-          className="col-span-4 p-2 bg-orange-500 text-white rounded"
-        >
-          =
-        </button>
+        <OperatorButton operator="=" handleClick={calculate} />
       </div>
     </div>
   );
